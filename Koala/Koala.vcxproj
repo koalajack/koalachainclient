@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DD218A5D-A083-44F9-B8B3-E04C378A60C9}</ProjectGuid>
+    <RootNamespace>Koala</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>./UI;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\lib;</AdditionalLibraryDirectories>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <BuildLog>
+      <Path>$(IntDir)\$(MSBuildProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="json\json_internalarray.inl" />
+    <None Include="json\json_internalmap.inl" />
+    <None Include="json\json_valueiterator.inl" />
+    <None Include="ReadMe.txt" />
+    <None Include="res\bitmap_p.bmp" />
+    <None Include="res\btn1.bmp" />
+    <None Include="res\btn2.bmp" />
+    <None Include="res\btn3.bmp" />
+    <None Include="res\close.bmp" />
+    <None Include="res\close1.bmp" />
+    <None Include="res\close2.bmp" />
+    <None Include="res\close3.bmp" />
+    <None Include="res\contentbk.bmp" />
+    <None Include="res\dizhixunaze.ico" />
+    <None Include="res\error_icon.bmp" />
+    <None Include="res\fasong.bmp" />
+    <None Include="res\fasong.ico" />
+    <None Include="res\gaikangpsd.bmp" />
+    <None Include="res\gaikangpsd.ico" />
+    <None Include="res\jiaoyijilu-1.ico" />
+    <None Include="res\jieshou.ico" />
+    <None Include="res\kaola-logo-.ico" />
+    <None Include="res\Koala.ico" />
+    <None Include="res\lock.bmp" />
+    <None Include="res\OverView.ico" />
+    <None Include="res\progress1.bmp" />
+    <None Include="res\qiyexinxi.ico" />
+    <None Include="res\Send.ico" />
+    <None Include="res\sig_0.bmp" />
+    <None Include="res\sig_1.bmp" />
+    <None Include="res\sig_2.bmp" />
+    <None Include="res\sig_3.bmp" />
+    <None Include="res\tip_icon.bmp" />
+    <None Include="res\title.bmp" />
+    <None Include="res\unlock.bmp" />
+    <None Include="res\wallet_uiproen.bmp" />
+    <None Include="res\warning_icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddrBookDlg.h" />
+    <ClInclude Include="AddrSelectDlg.h" />
+    <ClInclude Include="AutoComplete.h" />
+    <ClInclude Include="BalloonTip.h" />
+    <ClInclude Include="BmpBtn.h" />
+    <ClInclude Include="CeXDib.h" />
+    <ClInclude Include="CmdHelpDlg.h" />
+    <ClInclude Include="CommonStruct.h" />
+    <ClInclude Include="CompanyInfoDlg.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="DialogBase.h" />
+    <ClInclude Include="DrawButton.h" />
+    <ClInclude Include="EntAddrBookDlg.h" />
+    <ClInclude Include="EntCfgDlg.h" />
+    <ClInclude Include="EntInfoDlg.h" />
+    <ClInclude Include="EntRechargeDlg.h" />
+    <ClInclude Include="EntRigeistDlg.h" />
+    <ClInclude Include="EntWithdrawDlg.h" />
+    <ClInclude Include="explorer1.h" />
+    <ClInclude Include="GIFControl.h" />
+    <ClInclude Include="HSocket.h" />
+    <ClInclude Include="JsonConfigHelp.h" />
+    <ClInclude Include="json\assertions.h" />
+    <ClInclude Include="json\autolink.h" />
+    <ClInclude Include="json\config.h" />
+    <ClInclude Include="json\features.h" />
+    <ClInclude Include="json\forwards.h" />
+    <ClInclude Include="json\json.h" />
+    <ClInclude Include="json\json_batchallocator.h" />
+    <ClInclude Include="json\json_tool.h" />
+    <ClInclude Include="json\reader.h" />
+    <ClInclude Include="json\value.h" />
+    <ClInclude Include="json\version.h" />
+    <ClInclude Include="json\writer.h" />
+    <ClInclude Include="Koala.h" />
+    <ClInclude Include="KoalaDlg.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="mdump.h" />
+    <ClInclude Include="MessageBoxEx.h" />
+    <ClInclude Include="ModifyPasswordDlg.h" />
+    <ClInclude Include="MsgSigDlg.h" />
+    <ClInclude Include="MyMutex.h" />
+    <ClInclude Include="MyQueue.h" />
+    <ClInclude Include="NewAddressDlg.h" />
+    <ClInclude Include="NewRecvAddr.h" />
+    <ClInclude Include="NewSendAddr.h" />
+    <ClInclude Include="NoUiMsgBuffer.h" />
+    <ClInclude Include="OpenUriDlg.h" />
+    <ClInclude Include="OutGifDlg.h" />
+    <ClInclude Include="OverviewDlg.h" />
+    <ClInclude Include="PayeeAddrBookDlg.h" />
+    <ClInclude Include="PostMsg.h" />
+    <ClInclude Include="ReceiveDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RpcCmd.h" />
+    <ClInclude Include="RPDlg.h" />
+    <ClInclude Include="SelectRecvAddr.h" />
+    <ClInclude Include="SelectSendAddr.h" />
+    <ClInclude Include="SendDlg.h" />
+    <ClInclude Include="SetAdminDlg.h" />
+    <ClInclude Include="ShadeButtonST.h" />
+    <ClInclude Include="SignAccountsDlg.h" />
+    <ClInclude Include="SignDlg.h" />
+    <ClInclude Include="SplashThread.h" />
+    <ClInclude Include="sqlite3.h" />
+    <ClInclude Include="SqliteDeal.h" />
+    <ClInclude Include="StartProgress.h" />
+    <ClInclude Include="StaticTrans.h" />
+    <ClInclude Include="StatusDlg.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Subclass.h" />
+    <ClInclude Include="SynchronousSocket.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="tinyformat.h" />
+    <ClInclude Include="ToolCmdDlg.h" />
+    <ClInclude Include="ToolDlg.h" />
+    <ClInclude Include="ToolInfoDlg.h" />
+    <ClInclude Include="ToolPeerListDlg.h" />
+    <ClInclude Include="TradeRecordDlg.h" />
+    <ClInclude Include="TxDetailDlg.h" />
+    <ClInclude Include="uiapi.h" />
+    <ClInclude Include="UiHead.h" />
+    <ClInclude Include="UI\BtnST.h" />
+    <ClInclude Include="UI\CJFlatComboBox.h" />
+    <ClInclude Include="UI\CoolTabCtrl.h" />
+    <ClInclude Include="UI\FlatEdit.h" />
+    <ClInclude Include="UI\HeaderCtrlCl.h" />
+    <ClInclude Include="UI\ListCtrlCl.h" />
+    <ClInclude Include="VerifyDlg.h" />
+    <ClInclude Include="VersionDlg.h" />
+    <ClInclude Include="WalletEncDlg.h" />
+    <ClInclude Include="WalletPassPhrase.h" />
+    <ClInclude Include="XProgressCtrl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AddrBookDlg.cpp" />
+    <ClCompile Include="AddrSelectDlg.cpp" />
+    <ClCompile Include="AutoComplete.cpp" />
+    <ClCompile Include="BalloonTip.cpp" />
+    <ClCompile Include="BmpBtn.cpp" />
+    <ClCompile Include="CeXDib.cpp" />
+    <ClCompile Include="CmdHelpDlg.cpp" />
+    <ClCompile Include="CommonStruct.cpp" />
+    <ClCompile Include="CompanyInfoDlg.cpp" />
+    <ClCompile Include="DialogBase.cpp" />
+    <ClCompile Include="DrawButton.cpp" />
+    <ClCompile Include="EntAddrBookDlg.cpp" />
+    <ClCompile Include="EntCfgDlg.cpp" />
+    <ClCompile Include="EntInfoDlg.cpp" />
+    <ClCompile Include="EntRechargeDlg.cpp" />
+    <ClCompile Include="EntRigeistDlg.cpp" />
+    <ClCompile Include="EntWithdrawDlg.cpp" />
+    <ClCompile Include="explorer1.cpp" />
+    <ClCompile Include="GIFControl.cpp" />
+    <ClCompile Include="HSocket.cpp" />
+    <ClCompile Include="JsonConfigHelp.cpp" />
+    <ClCompile Include="json\json_reader.cpp" />
+    <ClCompile Include="json\json_value.cpp" />
+    <ClCompile Include="json\json_writer.cpp" />
+    <ClCompile Include="Koala.cpp" />
+    <ClCompile Include="KoalaDB.cpp" />
+    <ClCompile Include="KoalaDlg.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="mdump.cpp" />
+    <ClCompile Include="MessageBoxEx.cpp" />
+    <ClCompile Include="ModifyPasswordDlg.cpp" />
+    <ClCompile Include="MsgSigDlg.cpp" />
+    <ClCompile Include="MyMutex.cpp" />
+    <ClCompile Include="MyQueue.cpp" />
+    <ClCompile Include="NewAddressDlg.cpp" />
+    <ClCompile Include="NewRecvAddr.cpp" />
+    <ClCompile Include="NewSendAddr.cpp" />
+    <ClCompile Include="NoUiMsgBuffer.cpp" />
+    <ClCompile Include="OpenUriDlg.cpp" />
+    <ClCompile Include="OutGifDlg.cpp" />
+    <ClCompile Include="OverviewDlg.cpp" />
+    <ClCompile Include="PayeeAddrBookDlg.cpp" />
+    <ClCompile Include="PostMsg.cpp" />
+    <ClCompile Include="ReceiveDlg.cpp" />
+    <ClCompile Include="RpcCmd.cpp" />
+    <ClCompile Include="RPDlg.cpp" />
+    <ClCompile Include="SelectRecvAddr.cpp" />
+    <ClCompile Include="SelectSendAddr.cpp" />
+    <ClCompile Include="SendDlg.cpp" />
+    <ClCompile Include="SetAdminDlg.cpp" />
+    <ClCompile Include="ShadeButtonST.cpp" />
+    <ClCompile Include="SignAccountsDlg.cpp" />
+    <ClCompile Include="SignDlg.cpp" />
+    <ClCompile Include="SplashThread.cpp" />
+    <ClCompile Include="SqliteDeal.cpp" />
+    <ClCompile Include="StartProgress.cpp" />
+    <ClCompile Include="StaticTrans.cpp" />
+    <ClCompile Include="StatusDlg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Subclass.cpp" />
+    <ClCompile Include="SynchronousSocket.cpp" />
+    <ClCompile Include="ToolCmdDlg.cpp" />
+    <ClCompile Include="ToolDlg.cpp" />
+    <ClCompile Include="ToolInfoDlg.cpp" />
+    <ClCompile Include="ToolPeerListDlg.cpp" />
+    <ClCompile Include="TradeRecordDlg.cpp" />
+    <ClCompile Include="TxDetailDlg.cpp" />
+    <ClCompile Include="uiapi.cpp" />
+    <ClCompile Include="UiHead.cpp" />
+    <ClCompile Include="UI\BtnST.cpp" />
+    <ClCompile Include="UI\CJFlatComboBox.cpp" />
+    <ClCompile Include="UI\CoolTabCtrl.cpp" />
+    <ClCompile Include="UI\FlatEdit.cpp" />
+    <ClCompile Include="UI\HeaderCtrlCl.cpp" />
+    <ClCompile Include="UI\ListCtrlCl.cpp" />
+    <ClCompile Include="VerifyDlg.cpp" />
+    <ClCompile Include="VersionDlg.cpp" />
+    <ClCompile Include="WalletEncDlg.cpp" />
+    <ClCompile Include="WalletPassPhrase.cpp" />
+    <ClCompile Include="XProgressCtrl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Koala.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Koala.rc" _x007B_8856F961-340A-11D0-A96B-00C04FD705A2_x007D_="CExplorer1" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
